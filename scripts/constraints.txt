@@ -1,0 +1,4 @@
+# Baseline constraints for Frappe bench apps
+# Direct URL dependencies (like forks) must be declared here so uv allows them as transitive requirements
+gunicorn @ git+https://github.com/frappe/gunicorn@72c1e495d89259151e73947a057432d528b06bb0
+

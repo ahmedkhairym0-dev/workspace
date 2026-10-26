@@ -1,0 +1,93 @@
+{
+  "site_name": "vie_communities.localhost",
+  "setup": {
+    "language": "English",
+    "country": "Egypt",
+    "currency": "EGP",
+    "timezone": "Africa/Cairo",
+    "full_name": "Admin",
+    "email": "admin@vie_communities.localhost",
+    "password": "admin",
+    "company_name": "Vie Communities",
+    "company_abbr": "VIE",
+    "chart_of_accounts": "Standard"
+  },
+  "apps": [
+    {
+      "name": "frappe",
+      "branch": "v15.64.0"
+    },
+    {
+      "name": "erpnext",
+      "branch": "v15.64.0"
+    },
+    {
+      "name": "hrms",
+      "branch": "v15.47.1"
+    },
+    {
+      "name": "lending",
+      "branch": "develop"
+    },
+    {
+      "name": "erp_fabrica",
+      "branch": "version-15"
+    },
+    {
+      "name": "hr_fabrica",
+      "branch": "version-15"
+    },
+    {
+      "name": "fabrica_accounting",
+      "branch": "main"
+    },
+    {
+      "name": "fabrica_construction",
+      "branch": "master"
+    },
+    {
+      "name": "crm_integration",
+      "branch": "main"
+    },
+    {
+      "name": "fabrica_pwa",
+      "branch": "main"
+    },
+    {
+      "name": "vie_system",
+      "branch": "main"
+    },
+    {
+      "name": "fabrica_factoring",
+      "branch": "develop"
+    },
+    {
+      "name": "fabrica_leasing",
+      "branch": "develop"
+    },
+    {
+      "name": "learning_center",
+      "branch": "main"
+    },
+    {
+      "name": "handover",
+      "branch": "develop"
+    },
+    {
+      "name": "wiki",
+      "branch": "v2.0.1"
+    },
+    {
+      "name": "documentation_upkeep_client",
+      "branch": "develop"
+    },
+    {
+      "name": "commit",
+      "branch": "main"
+    },
+    {
+      "name": "fabrica_commit",
+      "branch": "main"
+    }
+  ]
+}

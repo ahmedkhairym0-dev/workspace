@@ -90,6 +90,8 @@ checkout_local_apps() {
         fi
     done < <(json_app_pairs "$CONFIG_FILE")
     bench setup requirements --python "${SITE_APPS[@]}"
+    "$BENCH_DIR/env/bin/python" -m pip uninstall -y rejson >/dev/null 2>&1 || true
+    "$BENCH_DIR/env/bin/python" -m pip install --quiet --force-reinstall "redis~=4.5.5" "chardet~=5.1.0" "hiredis~=2.2.3"
     bench setup requirements --node "${SITE_APPS[@]}"
 }
 

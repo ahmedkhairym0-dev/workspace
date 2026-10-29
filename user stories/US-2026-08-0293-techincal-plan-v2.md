@@ -89,6 +89,8 @@ Identify quantity and Provisional Sum changes against the persisted state.
 
 Reuse the existing invoice restriction before converting normal quantity to Provisional Sum.
 
+Allow rate changes through a draft VO for Contract items with invoiced quantity. Do not allow users to mark that invoiced quantity as Provisional Sum.
+
 Keep the existing restrictions on submitted quantity edits and later document dependencies.
 
 Capture the affected quantities, statuses, references, and portion identities before mutation.
@@ -98,6 +100,8 @@ Capture the affected quantities, statuses, references, and portion identities be
 **Implementation result:** Submission captures prior Contract rows, the Contract allocation snapshot, and affected BOQ documents in transient flags.
 
 Submission rechecks invoice conversion restrictions, active Contract row links, invoiced quantity limits, and rate restrictions.
+
+Invoiced quantity alone must not block the rate change when the draft VO is submitted. The Provisional Sum conversion restriction still applies.
 
 Submitted VO quantity and rate edits are currently blocked before the update handler. This restriction remains unchanged.
 
@@ -320,7 +324,9 @@ Use simulated verification by default. Run real or local tests only when explici
 | Full conversion becomes partial, then full again | Combined BOQ quantity stays constant. No duplicate portions remain. |
 | Save the same VO repeatedly | No allocation drift or extra portions. |
 | Another Contract consumes part of the source | Its quantity and references remain valid. |
+| Change the rate through a draft VO for a Contract item with invoiced quantity | Submission applies the new rate to the existing Contract row. |
 | Convert an invoiced Contract row to provisional | Existing invoice validation blocks conversion. |
+| Change the rate and mark invoiced quantity as Provisional Sum in the same draft VO | Validation blocks Provisional Sum conversion. The rate change does not bypass this restriction. |
 | Cancel after repeated submitted quantity edits | Pre-VO quantities, statuses, and references return when dependencies permit. |
 | Use decimal quantities | Portions sum to the original quantity at configured precision. |
 | Use resource-mode BOQ | Child and resource distributions agree. Combined quantities remain preserved. |

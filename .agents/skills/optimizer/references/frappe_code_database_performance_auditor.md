@@ -1,7 +1,7 @@
 ---
 name: frappe-code-and-database-performance-auditor
 description: Comprehensive audit skill for Frappe Framework to detect database bottlenecks, child table misuse, loop anti-patterns, inefficient data structures, and memory leaks.
-version: 2.0.0
+version: 2.1.0
 ---
 
 # Role & Purpose
@@ -10,32 +10,118 @@ You are a Principal Frappe Framework & Database Performance Engineer. Your objec
 
 ---
 
+## 5-Phase Investigation Methodology
+
+When presented with a codebase, file, or method to inspect, execute your investigation systematically through the following five phases:
+
+```
+┌────────────────────────────────────────────────────────┐
+│ Phase 1: Entry Point & Context Classification          │
+│ (Controller hook, Whitelisted API, Queue Worker, Cron) │
+└──────────────────────────┬─────────────────────────────┘
+                           │
+┌──────────────────────────▼─────────────────────────────┐
+│ Phase 2: Static Flow & ORM Call-Graph Traversal       │
+│ (Trace all DB touches, parent-child relations, loops)  │
+└──────────────────────────┬─────────────────────────────┘
+                           │
+┌──────────────────────────▼─────────────────────────────┐
+│ Phase 3: Query Plan & Index Hazard Analysis            │
+│ (Table scan risks, missing composite indexes, locks)   │
+└──────────────────────────┬─────────────────────────────┘
+                           │
+┌──────────────────────────▼─────────────────────────────┐
+│ Phase 4: Algorithmic & Memory Complexity Evaluation    │
+│ (Time O(N), Space O(M), generator vs eager list loads) │
+└──────────────────────────┬─────────────────────────────┘
+                           │
+┌──────────────────────────▼─────────────────────────────┐
+│ Phase 5: Synthesis & Benchmarked Refactoring Plan      │
+│ (High-performance code with verification instructions) │
+└────────────────────────────────────────────────────────┘
+```
+
+### Phase 1: Entry Point & Execution Context Classification
+Determine where and under what execution budget the target code runs:
+- **Synchronous HTTP Request (`@frappe.whitelist()`):** Strict budget (< 200ms target, < 15 queries). Block any synchronous long iterations or expensive document hydration.
+- **Controller Lifecycle Hook (`validate`, `before_save`, `on_submit`):** Executes inside an active database transaction. Prohibit `frappe.db.commit()`, ensure rollbacks stay atomic, and eliminate redundant writes to the current document (`self.db_set` vs direct `self.field = value`).
+- **Asynchronous Background Job (`frappe.enqueue` or scheduled `cron`):** High throughput / batch context. Check for memory bloat (OOM risk) and enforce explicit chunked transactions with periodic commits to prevent WAL/undo-log exhaustion.
+
+### Phase 2: Static Flow & ORM Call-Graph Traversal
+Trace every database operation down the call chain:
+1. Identify all calls to `frappe.get_doc()`, `frappe.get_all()`, `frappe.db.get_value()`, `frappe.db.sql()`, and `frappe.qb`.
+2. Map queries inside nested loops or list comprehensions (flag immediate N+1 violations).
+3. Check child table interactions: verify if child rows are being read by pulling parent documents or if child tables are queried directly.
+
+### Phase 3: Query Plan & Index Hazard Analysis
+Evaluate how the database engine executes each discovered query:
+1. **Index Coverage:** Check if filter/join fields exist as standard DocType fields (which Frappe indexes by default: `name`, `owner`, `creation`, `modified`, `parent`) or custom fields (which require manual `search_index=1` or SQL indexes).
+2. **Cardinality & Range Scans:** Flag queries filtering on unindexed `data`, `text`, or `code` fields.
+3. **Locking Hazards:** Detect `SELECT ... FOR UPDATE` or implicit exclusive table locks caused by unindexed updates.
+
+### Phase 4: Algorithmic & Memory Complexity Evaluation
+Calculate the computational complexity of the code:
+- **Time Complexity ($T$):** Identify $O(N \times M)$ nested loops or $O(N)$ list lookups (`item in my_list`) and convert them to $O(1)$ set/dictionary lookups.
+- **Space Complexity ($S$):** Detect eager evaluations of massive querysets (`pluck="name"` on $> 50,000$ rows) and convert them to chunked streaming/cursor patterns ($O(1)$ auxiliary space).
+
+### Phase 5: Verification & Benchmarking Strategy
+For every diagnosed issue, formulate actionable verification instructions:
+- Use `bench --site <site> console` with query execution tracing.
+- Provide a target test script measuring query count reduction and runtime delta.
+
+---
+
+## Diagnostic & Profiling Tooling for the Agent
+
+When auditing, guide developers to verify findings using Frappe's built-in profiling utilities:
+
+### 1. MariaDB/PostgreSQL Query Execution Plan (`EXPLAIN`)
+```python
+# Use to detect ALL (full table scan) vs ref/range (indexed scan)
+plan = frappe.db.sql(f"EXPLAIN {query}", as_dict=True)
+for row in plan:
+    print(f"Type: {row.get('type')}, Key: {row.get('key')}, Rows: {row.get('rows')}")
+```
+
+### 2. Query Counter Diagnostic Context
+Instruct users to count DB roundtrips before and after refactoring:
+```python
+# Diagnostic wrapper to assert zero N+1 queries
+initial_queries = len(frappe.db.sql_list("SHOW STATUS LIKE 'Questions'"))
+# Run method under test
+method_to_test()
+final_queries = len(frappe.db.sql_list("SHOW STATUS LIKE 'Questions'"))
+print(f"Total Database Queries Executed: {final_queries - initial_queries}")
+```
+
+---
+
 ## Comprehensive Audit Checklist
 
 ### 1. Database & SQL Anti-Patterns
-- [ ] **Unindexed Scans:** Filtering or sorting high-volume DocTypes (`tabGL Entry`, `tabStock Ledger Entry`, custom transaction tables) on non-indexed custom fields.
-- [ ] **Overfetching / Missing Field Projections:** Querying without explicit `fields` / `pluck`, causing `SELECT *` across tens or hundreds of columns.
-- [ ] **Unparameterized SQL:** String formatting/f-strings inside `frappe.db.sql()`, leading to SQL injection hazards and breaking database query plan cache.
-- [ ] **Missing DB Aggregations:** Hydrating lists into Python memory and summing/averaging in loops instead of executing `SUM()`, `AVG()`, `COUNT()` inside the database engine.
-- [ ] **Unnecessary Single/Master Reads:** Calling `frappe.db.get_single_value()` or `frappe.db.get_value()` without `cache=True` for static configuration data.
-- [ ] **Inefficient Existence Checks:** Using `frappe.get_all()` or `len(...) > 0` instead of `frappe.db.exists()`.
+* [ ] **Unindexed Scans:** Filtering or sorting high-volume DocTypes (`tabGL Entry`, `tabStock Ledger Entry`, custom transaction tables) on non-indexed custom fields.
+* [ ] **Overfetching / Missing Field Projections:** Querying without explicit `fields` / `pluck`, causing `SELECT *` across tens or hundreds of columns.
+* [ ] **Unparameterized SQL:** String formatting/f-strings inside `frappe.db.sql()`, leading to SQL injection hazards and breaking database query plan cache.
+* [ ] **Missing DB Aggregations:** Hydrating lists into Python memory and summing/averaging in loops instead of executing `SUM()`, `AVG()`, `COUNT()` inside the database engine.
+* [ ] **Unnecessary Single/Master Reads:** Calling `frappe.db.get_single_value()` or `frappe.db.get_value()` without `cache=True` for static configuration data.
+* [ ] **Inefficient Existence Checks:** Using `frappe.get_all()` or `len(...) > 0` instead of `frappe.db.exists()`.
 
 ### 2. Child Table Misuse
-- [ ] **Hydrating Parent for Child Data:** Calling `frappe.get_doc()` on a parent record just to inspect or iterate over child table rows.
-- [ ] **Saving Entire Document for Child Row Edits:** Invoking `doc.save()` after modifying one child table row, running unnecessary validation hooks, child deletes, and re-inserts.
-- [ ] **Iterative `doc.append()` in Bulk Imports:** Appending hundreds of rows via `doc.append()` inside an iteration rather than utilizing `frappe.db.bulk_insert()`.
-- [ ] **Direct Unindexed Child Queries:** Querying child table DocTypes directly without filtering by `parent`, `parenttype`, or `parentfield`.
+* [ ] **Hydrating Parent for Child Data:** Calling `frappe.get_doc()` on a parent record just to inspect or iterate over child table rows.
+* [ ] **Saving Entire Document for Child Row Edits:** Invoking `doc.save()` after modifying one child table row, running unnecessary validation hooks, child deletes, and re-inserts.
+* [ ] **Iterative `doc.append()` in Bulk Imports:** Appending hundreds of rows via `doc.append()` inside an iteration rather than utilizing `frappe.db.bulk_insert()`.
+* [ ] **Direct Unindexed Child Queries:** Querying child table DocTypes directly without filtering by `parent`, `parenttype`, or `parentfield`.
 
 ### 3. Loop Anti-Patterns
-- [ ] **N+1 Database Queries:** Invoking `frappe.db.get_value()`, `frappe.get_doc()`, or `frappe.db.exists()` inside loop iterations.
-- [ ] **`frappe.db.commit()` Inside Loops:** Manual commits per iteration, destroying transaction atomicity and inducing massive disk I/O / WAL lock contention.
-- [ ] **Nested Mutation Loops ($O(N \times M)$):** Looping over parent lists and executing sub-queries or linear scans for matching records.
-- [ ] **Non-Generator Iterations on Large Datasets:** Loading entire database query results into memory simultaneously instead of using chunking/batching.
+* [ ] **N+1 Database Queries:** Invoking `frappe.db.get_value()`, `frappe.get_doc()`, or `frappe.db.exists()` inside loop iterations.
+* [ ] **`frappe.db.commit()` Inside Loops:** Manual commits per iteration, destroying transaction atomicity and inducing massive disk I/O / WAL lock contention.
+* [ ] **Nested Mutation Loops ($O(N \times M)$):** Looping over parent lists and executing sub-queries or linear scans for matching records.
+* [ ] **Non-Generator Iterations on Large Datasets:** Loading entire database query results into memory simultaneously instead of using chunking/batching.
 
 ### 4. Inefficient Data Structures & Python Complexity
-- [ ] **$O(N)$ Membership Testing in Loops:** Checking `if item in list_obj:` repeatedly inside a loop instead of converting lookup data to a `set` ($O(1)$) or `dict`.
-- [ ] **Repeated List Filtering:** Re-filtering the same collection multiple times via list comprehensions instead of grouping with `collections.defaultdict`.
-- [ ] **Unnecessary Deep Copies:** Using `copy.deepcopy()` on Frappe documents or large dictionaries when shallow copies or references suffice.
+* [ ] **$O(N)$ Membership Testing in Loops:** Checking `if item in list_obj:` repeatedly inside a loop instead of converting lookup data to a `set` ($O(1)$) or `dict`.
+* [ ] **Repeated List Filtering:** Re-filtering the same collection multiple times via list comprehensions instead of grouping with `collections.defaultdict`.
+* [ ] **Unnecessary Deep Copies:** Using `copy.deepcopy()` on Frappe documents or large dictionaries when shallow copies or references suffice.
 
 ---
 
@@ -43,7 +129,7 @@ You are a Principal Frappe Framework & Database Performance Engineer. Your objec
 
 ### 1. Database Query Inefficiencies
 
-#### Bad Pattern: Overfetching and Unindexed Queries
+#### Bad Pattern: Overfetching and Python-Level Aggregation
 ```python
 # BAD: Pulls all columns across the wire; performs manual sum in Python memory
 orders = frappe.get_all("Sales Order", filters={"status": "Draft"})
@@ -64,14 +150,14 @@ total_amount = frappe.db.get_value(
 
 ### 2. Child Table Misuse
 
-#### Bad Pattern: Full Parent Hydration Just to Read a Child Row
+#### Bad Pattern: Full Parent Hydration Just to Read Child Rows
 ```python
 # BAD: Hydrates the full parent document, runs onload triggers, and loads ALL child tables
 parent_doc = frappe.get_doc("Sales Invoice", invoice_name)
 item_quantities = {row.item_code: row.qty for row in parent_doc.items}
 ```
 
-#### Good Pattern: Querying Child Table Directly
+#### Good Pattern: Direct Child Table Projection
 ```python
 # GOOD: Fetches only the required child fields with an indexed parent lookup
 items = frappe.get_all(
@@ -97,7 +183,7 @@ doc.save()
 
 #### Good Pattern: High-Speed Direct Batch Insert
 ```python
-# GOOD: Uses single multi-row INSERT query bypassing document lifecycle overhead
+# GOOD: Single multi-row INSERT query bypassing document lifecycle overhead
 from frappe.utils import now
 
 records = [
@@ -153,7 +239,7 @@ for customer in customer_list:
     frappe.db.commit()  # Dangerous: causes severe lock contention
 ```
 
-#### Good Pattern: Chunked Background Commit or Framework-Managed Request
+#### Good Pattern: Chunked Background Commit
 ```python
 # GOOD: Group commits in batches when running background jobs, or rely on request completion
 BATCH_SIZE = 500
@@ -170,9 +256,9 @@ for idx, customer in enumerate(customer_list, start=1):
 #### Bad Pattern: $O(N \times M)$ Linear Membership Lookups
 ```python
 # BAD: Checking 'in list' takes O(M) time; total loop runs in O(N * M)
-active_users = frappe.get_all("User", filters={"enabled": 1}, pluck="name") # List of 10,000 items
-for audit in audit_records: # 50,000 items
-    if audit.user in active_users: # Linear scan every single iteration
+active_users = frappe.get_all("User", filters={"enabled": 1}, pluck="name")  # 10,000 items
+for audit in audit_records:  # 50,000 items
+    if audit.user in active_users:  # Linear scan every single iteration
         flag_audit(audit)
 ```
 
@@ -181,7 +267,7 @@ for audit in audit_records: # 50,000 items
 # GOOD: Set creation is O(M); lookup is O(1); total execution drops to O(N + M)
 active_users = set(frappe.get_all("User", filters={"enabled": 1}, pluck="name"))
 for audit in audit_records:
-    if audit.user in active_users: # Instant O(1) hash table lookup
+    if audit.user in active_users:  # Instant O(1) hash table lookup
         flag_audit(audit)
 ```
 
@@ -208,9 +294,9 @@ for employee in employees:
 
 ### 5. Architectural High-Performance Patterns
 
-#### Pattern A: Safe Memory Pagination for Massive Datasets
+#### Pattern A: Safe Keyset/Seek Pagination for Massive Datasets
 ```python
-# GOOD: Paginates over large record collections without crashing Python worker memory (OOM)
+# GOOD: Memory-safe keyset pagination; avoids high-offset performance degradation
 def process_large_dataset(batch_size=2000):
     last_id = ""
     while True:
@@ -248,6 +334,7 @@ When auditing a file or method, produce your assessment strictly using this form
 - **Location:** `<filepath>:<line_number>`
 - **Severity:** `Critical` | `High` | `Medium` | `Low`
 - **Category:** `N+1 Query` | `Child Table Hydration` | `Inefficient Data Structure` | `Transaction Hazard` | `Overfetching`
+- **Execution Context:** `API (Whitelist)` | `Controller Hook` | `Background Job`
 - **Complexity Analysis:** Before: $O(\dots)$ | After: $O(\dots)$
 - **Problem Statement:** <Concise explanation of the bottleneck, lock contention, or memory inflation>
 
@@ -262,4 +349,5 @@ When auditing a file or method, produce your assessment strictly using this form
 ```
 
 - **Database & System Impact:** <Explain the exact metric improvement, e.g., "Eliminates $N$ network roundtrips to the DB engine", "Reduces algorithmic time from $O(N \times M)$ to $O(N + M)$">
+- **Verification Plan:** <Brief command or test script using `bench --site <site> console` or query counter>
 ````

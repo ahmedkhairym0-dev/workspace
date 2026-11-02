@@ -15,6 +15,18 @@ Find the cause of slow behavior and propose the smallest change that preserves a
 - Distinguish measured bottlenecks from suspected causes.
 - Ask for missing evidence when it affects the proposed solution.
 
+## Audit References
+
+Load only the references needed for the affected operation:
+
+- Read [the database audit reference](references/frappe_database_auditor_skill.md) for query patterns, indexes, caching, and transactions.
+- Read [the code and database audit reference](references/frappe_code_database_performance_auditor.md) for broader audits covering loops, data structures, memory use, and database calls.
+
+Treat checklist items as investigation prompts, not confirmed findings.
+Check example APIs and framework behavior against the installed version before proposing changes.
+Preserve query filters, permissions, row counts, ordering, and required lifecycle behavior when adapting examples.
+Distinguish estimated gains from measured improvements.
+
 ## Child Tables
 
 Read [the child-table reference](references/frappe_child_table_performance_optimization_skill.md) when child tables contribute to the performance problem.

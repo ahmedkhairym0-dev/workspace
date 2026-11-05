@@ -103,6 +103,31 @@ graph TD
 
 ---
 
+## 4.5 Completion Status Snapshot
+
+The refactor has moved from a design proposal into a partially implemented architecture. Based on the repository state, the current completion rate is approximately 60%.
+
+### Completion Summary
+- **Completed (≈60%)**
+  - Centralized spatial hierarchy validation in `SpatialHierarchyService`.
+  - Server-side land-area conversion and BUA calculation moved into shared Python utilities.
+  - `ConstructionLocation.validate()` now enforces the conversion formulas in backend code.
+  - Dashboard query logic extracted to `construction_analytics.py` and consumed by construction item/category callers.
+  - Coverage added for the new service-layer logic and conversion routines.
+
+- **Remaining (≈40%)**
+  - Finish the full schema cleanup for `Building Type` / `Block` naming and `Unit.unite_type` semantics.
+  - Harden `ConstructionCategory` rename logic to remove the deadlock risk introduced by automatic tree renaming during `on_update`.
+  - Add the base `ResourcesPriceList` validation contract so downstream apps cannot bypass it by overriding `validate()` without `super()`.
+  - Complete the deep module split into fully shared domain services and remove remaining duplicated logic across the hierarchy and catalog modules.
+
+### Current Completion Rate
+- **Implemented:** 60%
+- **Remaining:** 40%
+- **Status:** Partially implemented; the core invariant and analytics services are in place, but the category-tree/hierarchy cleanup and downstream seams are still outstanding.
+
+---
+
 ## 5. Refactoring Plan (Deep Module Architecture)
 
 Following the principles of **codebase-design** (Small Interface, Deep Implementation, Clear Seams, High Locality):

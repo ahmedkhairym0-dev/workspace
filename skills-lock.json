@@ -1,11 +1,29 @@
 {
   "version": 1,
   "skills": {
+    "apex": {
+      "source": "melvynx/aiblueprint",
+      "sourceType": "github",
+      "skillPath": "skills/apex/SKILL.md",
+      "computedHash": "8778a40b7283b0fc889525aef1da389ac1f27862cfae58d379f6943453b90b45"
+    },
+    "code-review": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/code-review/SKILL.md",
+      "computedHash": "c2745e2be960b82b9fddd82cf45265f42431e7b045c403f297b25f0f311e9210"
+    },
     "code-style": {
       "source": "frappe/skills",
       "sourceType": "github",
       "skillPath": "skills/code-style/SKILL.md",
       "computedHash": "158e8cc8fa680cd8650e11f42cb940757d70353a607cd3144e6158d8add91e66"
+    },
+    "codebase-design": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/codebase-design/SKILL.md",
+      "computedHash": "aa11a96c08451f4ff86052d5da94004a8c97bb4ea41b2ac8a4300c189f66c89c"
     },
     "deep-app-audit": {
       "source": "frappe/skills",
@@ -37,17 +55,77 @@
       "skillPath": "skills/frappe-code-review/SKILL.md",
       "computedHash": "76db60c6865eba3a7c2f3ff079f3904db753a7b1bd16e4f24ace75e10351be0f"
     },
+    "generate-test-cases": {
+      "source": "mavka-ai/unit-tests-skills",
+      "sourceType": "github",
+      "skillPath": "skills/generate-test-cases/SKILL.md",
+      "computedHash": "e86140660da4b5c026660c9dd2463e8921a4df63577ace104fc07d275cbe3d54"
+    },
+    "generate-tests": {
+      "source": "mavka-ai/unit-tests-skills",
+      "sourceType": "github",
+      "skillPath": "skills/generate-tests/SKILL.md",
+      "computedHash": "be6edbdb9bb66aeb1f97fc31eb988804d61b5feb7bbedf6e2c35de81b134e807"
+    },
+    "grill-me": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/productivity/grill-me/SKILL.md",
+      "computedHash": "9cdbb4b8f7a3aeaef82e6230c9e823500d4a8a1214c726cf342cf9829d34fc7d"
+    },
+    "grilling": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/productivity/grilling/SKILL.md",
+      "computedHash": "e40cc1d348f6d935e28f1e24474302d7368f0a400429271a43b35fe154891dc5"
+    },
+    "implement-spec": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/implement-spec/SKILL.md",
+      "computedHash": "0ccc13c6766b0e5f55229c8f1252d004090da70e6610b4c324cd245970fcb3f1"
+    },
+    "improve-codebase-architecture": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/improve-codebase-architecture/SKILL.md",
+      "computedHash": "f768cb44209e0d30e3449b8f95ea3dc8293093f73cfe02127d530db43412cf76"
+    },
     "resolve-backport-conflicts": {
       "source": "frappe/skills",
       "sourceType": "github",
       "skillPath": "skills/resolve-backport-conflicts/SKILL.md",
       "computedHash": "0b72672daf96ef494b17ca20cdcb8a203fb0e0c4b8aa368280ec3aa1d996a01a"
     },
+    "tdd": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/tdd/SKILL.md",
+      "computedHash": "daf55026f456af104a72fa43247f7bcec89e5127316dc5b1b8d675d6a9d8ce94"
+    },
     "technical-writing": {
       "source": "frappe/skills",
       "sourceType": "github",
       "skillPath": "skills/technical-writing/SKILL.md",
       "computedHash": "08470ffb6aa0878e95a06e540a8ded61c122db0450c6f3991d7b56477a202faa"
+    },
+    "thermo-nuclear-code-quality-review": {
+      "source": "cursor/plugins",
+      "sourceType": "github",
+      "skillPath": "cursor-team-kit/skills/thermo-nuclear-code-quality-review/SKILL.md",
+      "computedHash": "9052b01b46b1d8dbf94c45f9313ec1983443f9a460e83d49cdc7fe0f640ca476"
+    },
+    "to-spec": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/to-spec/SKILL.md",
+      "computedHash": "3fa1a0695d4ea242fae9e569e4d22aa1788623197abb33bfadafae7315789bbf"
+    },
+    "to-tickets": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/to-tickets/SKILL.md",
+      "computedHash": "5f871bdc46a9212222214ba399be4965374208af1bd7f48f1271bef72841dd31"
     },
     "ui-design": {
       "source": "frappe/skills",

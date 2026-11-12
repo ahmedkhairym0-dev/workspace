@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "execution_step": "step-03-execute.md",
+  "tasks": [
+    {
+      "id": "server",
+      "objective": "Atomic merge and validated candidate preview",
+      "dependencies": [],
+      "read_set": [
+        "story",
+        "approved plan",
+        "existing code/framework"
+      ],
+      "write_set": [
+        "services/consultation_import*.py",
+        "tests/test_consultation_import*.py"
+      ],
+      "side_effects": [
+        "local file changes only"
+      ],
+      "owner": "implement_import_server",
+      "inputs": [
+        "approved phases4-5"
+      ],
+      "expected_outputs": [
+        "Atomic merge and validated candidate preview"
+      ],
+      "validation": [
+        "syntax",
+        "diff review",
+        "simulated checks"
+      ],
+      "evidence_required": [
+        "static evidence",
+        "independent review"
+      ],
+      "stop_condition": "Acceptance satisfied by implementation/static evidence or concrete blocker reported",
+      "status": "complete"
+    },
+    {
+      "id": "client",
+      "objective": "Workbook reader, upload coordination, calculated form application",
+      "dependencies": [],
+      "read_set": [
+        "story",
+        "approved plan",
+        "existing code/framework"
+      ],
+      "write_set": [
+        "public/js/sheet_utils.js",
+        "public/js/consultation_sheets.js",
+        "consultation JS apply methods",
+        "tests/test_consultation_sheets.js"
+      ],
+      "side_effects": [
+        "local file changes only"
+      ],
+      "owner": "coordinator",
+      "inputs": [
+        "approved phases4-5"
+      ],
+      "expected_outputs": [
+        "Workbook reader, upload coordination, calculated form application"
+      ],
+      "validation": [
+        "syntax",
+        "diff review",
+        "simulated checks"
+      ],
+      "evidence_required": [
+        "static evidence",
+        "independent review"
+      ],
+      "stop_condition": "Acceptance satisfied by implementation/static evidence or concrete blocker reported",
+      "status": "complete"
+    },
+    {
+      "id": "acceptance",
+      "objective": "Independent review and simulated full acceptance matrix",
+      "dependencies": [
+        "server",
+        "client"
+      ],
+      "read_set": [
+        "story",
+        "approved plan",
+        "existing code/framework"
+      ],
+      "write_set": [
+        "technical plan status and acceptance artifact"
+      ],
+      "side_effects": [
+        "local file changes only"
+      ],
+      "owner": "coordinator/reviewers",
+      "inputs": [
+        "approved phases4-5"
+      ],
+      "expected_outputs": [
+        "Independent review and simulated full acceptance matrix"
+      ],
+      "validation": [
+        "syntax",
+        "diff review",
+        "simulated checks"
+      ],
+      "evidence_required": [
+        "static evidence",
+        "independent review"
+      ],
+      "stop_condition": "Acceptance satisfied by implementation/static evidence or concrete blocker reported",
+      "status": "complete"
+    }
+  ]
+}

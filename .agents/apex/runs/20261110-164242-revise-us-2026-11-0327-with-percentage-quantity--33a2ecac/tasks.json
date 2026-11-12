@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "execution_step": "step-03-execute.md",
+  "tasks": [
+    {
+      "id": "quantity-policy",
+      "objective": "quantity-policy",
+      "dependencies": [],
+      "read_set": [
+        "approved story change",
+        "existing Construction and consultation flow"
+      ],
+      "write_set": [
+        "services/consultation_quantity_allowance.py",
+        "tests/test_consultation_quantity_allowance.py"
+      ],
+      "side_effects": [
+        "local edits only"
+      ],
+      "owner": "implement_quantity_policy",
+      "inputs": [
+        "percentage confirmed",
+        "billing-period confirmed"
+      ],
+      "expected_outputs": [
+        "quantity-policy"
+      ],
+      "validation": [
+        "AST/JS/JSON syntax",
+        "whitespace",
+        "simulated outcomes"
+      ],
+      "evidence_required": [
+        "independent static review"
+      ],
+      "stop_condition": "Approved behavior implemented and static evidence reviewed",
+      "status": "complete"
+    },
+    {
+      "id": "integration",
+      "objective": "integration",
+      "dependencies": [],
+      "read_set": [
+        "approved story change",
+        "existing Construction and consultation flow"
+      ],
+      "write_set": [
+        "invoice controller",
+        "test fixtures",
+        "import error mapping",
+        "story/plan/review"
+      ],
+      "side_effects": [
+        "local edits only"
+      ],
+      "owner": "coordinator",
+      "inputs": [
+        "percentage confirmed",
+        "billing-period confirmed"
+      ],
+      "expected_outputs": [
+        "integration"
+      ],
+      "validation": [
+        "AST/JS/JSON syntax",
+        "whitespace",
+        "simulated outcomes"
+      ],
+      "evidence_required": [
+        "independent static review"
+      ],
+      "stop_condition": "Approved behavior implemented and static evidence reviewed",
+      "status": "complete"
+    },
+    {
+      "id": "review",
+      "objective": "review",
+      "dependencies": [
+        "quantity-policy",
+        "integration"
+      ],
+      "read_set": [
+        "approved story change",
+        "existing Construction and consultation flow"
+      ],
+      "write_set": [
+        "read-only integrated diff"
+      ],
+      "side_effects": [
+        "local edits only"
+      ],
+      "owner": "independent reviewer",
+      "inputs": [
+        "percentage confirmed",
+        "billing-period confirmed"
+      ],
+      "expected_outputs": [
+        "review"
+      ],
+      "validation": [
+        "AST/JS/JSON syntax",
+        "whitespace",
+        "simulated outcomes"
+      ],
+      "evidence_required": [
+        "independent static review"
+      ],
+      "stop_condition": "Approved behavior implemented and static evidence reviewed",
+      "status": "complete"
+    }
+  ]
+}

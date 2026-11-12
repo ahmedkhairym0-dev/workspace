@@ -1,0 +1,272 @@
+2026-11-09 23:40:07,952 ERROR frappe Unable to load translations
+Site: None
+Form Dict: None
+Traceback (most recent call last):
+  File "/home/ahmed-khairy/Documents/Projects/Fabrica_Project/frappe-bench/apps/frappe/frappe/translate.py", line 155, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'hget'
+2026-11-09 23:40:07,954 ERROR frappe Unable to load translations
+Site: None
+Form Dict: None
+Traceback (most recent call last):
+  File "/home/ahmed-khairy/Documents/Projects/Fabrica_Project/frappe-bench/apps/frappe/frappe/translate.py", line 155, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'hget'
+2026-11-09 23:40:07,954 ERROR frappe Unable to load translations
+Site: None
+Form Dict: None
+Traceback (most recent call last):
+  File "/home/ahmed-khairy/Documents/Projects/Fabrica_Project/frappe-bench/apps/frappe/frappe/translate.py", line 155, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'hget'
+2026-11-09 23:40:07,958 ERROR frappe Unable to load translations
+Site: None
+Form Dict: None
+Traceback (most recent call last):
+  File "/home/ahmed-khairy/Documents/Projects/Fabrica_Project/frappe-bench/apps/frappe/frappe/translate.py", line 155, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'hget'
+2026-11-09 23:40:07,958 ERROR frappe Unable to load translations
+Site: None
+Form Dict: None
+Traceback (most recent call last):
+  File "/home/ahmed-khairy/Documents/Projects/Fabrica_Project/frappe-bench/apps/frappe/frappe/translate.py", line 155, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'hget'
+2026-11-09 23:40:07,958 ERROR frappe Unable to load translations
+Site: None
+Form Dict: None
+Traceback (most recent call last):
+  File "/home/ahmed-khairy/Documents/Projects/Fabrica_Project/frappe-bench/apps/frappe/frappe/translate.py", line 155, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'hget'
+2026-11-09 23:40:07,958 ERROR frappe Unable to load translations
+Site: None
+Form Dict: None
+Traceback (most recent call last):
+  File "/home/ahmed-khairy/Documents/Projects/Fabrica_Project/frappe-bench/apps/frappe/frappe/translate.py", line 155, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'hget'
+2026-11-09 23:40:07,959 ERROR frappe Unable to load translations
+Site: None
+Form Dict: None
+Traceback (most recent call last):
+  File "/home/ahmed-khairy/Documents/Projects/Fabrica_Project/frappe-bench/apps/frappe/frappe/translate.py", line 155, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'hget'
+2026-11-09 23:40:07,959 ERROR frappe Unable to load translations
+Site: None
+Form Dict: None
+Traceback (most recent call last):
+  File "/home/ahmed-khairy/Documents/Projects/Fabrica_Project/frappe-bench/apps/frappe/frappe/translate.py", line 155, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'hget'
+2026-11-09 23:40:07,960 ERROR frappe Unable to load translations
+Site: None
+Form Dict: None
+Traceback (most recent call last):
+  File "/home/ahmed-khairy/Documents/Projects/Fabrica_Project/frappe-bench/apps/frappe/frappe/translate.py", line 155, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'hget'
+2026-11-09 23:40:07,972 ERROR frappe Unable to load translations
+Site: None
+Form Dict: None
+Traceback (most recent call last):
+  File "/home/ahmed-khairy/Documents/Projects/Fabrica_Project/frappe-bench/apps/frappe/frappe/translate.py", line 155, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'hget'
+2026-11-09 23:40:07,972 ERROR frappe Unable to load translations
+Site: None
+Form Dict: None
+Traceback (most recent call last):
+  File "/home/ahmed-khairy/Documents/Projects/Fabrica_Project/frappe-bench/apps/frappe/frappe/translate.py", line 155, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'hget'
+2026-11-09 23:40:07,973 ERROR frappe Unable to load translations
+Site: None
+Form Dict: None
+Traceback (most recent call last):
+  File "/home/ahmed-khairy/Documents/Projects/Fabrica_Project/frappe-bench/apps/frappe/frappe/translate.py", line 155, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'hget'
+2026-11-09 23:40:07,973 ERROR frappe Unable to load translations
+Site: None
+Form Dict: None
+Traceback (most recent call last):
+  File "/home/ahmed-khairy/Documents/Projects/Fabrica_Project/frappe-bench/apps/frappe/frappe/translate.py", line 155, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'hget'
+2026-11-09 23:40:07,973 ERROR frappe Unable to load translations
+Site: None
+Form Dict: None
+Traceback (most recent call last):
+  File "/home/ahmed-khairy/Documents/Projects/Fabrica_Project/frappe-bench/apps/frappe/frappe/translate.py", line 155, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'hget'
+2026-11-09 23:40:07,973 ERROR frappe Unable to load translations
+Site: None
+Form Dict: None
+Traceback (most recent call last):
+  File "/home/ahmed-khairy/Documents/Projects/Fabrica_Project/frappe-bench/apps/frappe/frappe/translate.py", line 155, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'hget'
+2026-11-09 23:40:07,974 ERROR frappe Unable to load translations
+Site: None
+Form Dict: None
+Traceback (most recent call last):
+  File "/home/ahmed-khairy/Documents/Projects/Fabrica_Project/frappe-bench/apps/frappe/frappe/translate.py", line 155, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'hget'
+2026-11-09 23:40:07,974 ERROR frappe Unable to load translations
+Site: None
+Form Dict: None
+Traceback (most recent call last):
+  File "/home/ahmed-khairy/Documents/Projects/Fabrica_Project/frappe-bench/apps/frappe/frappe/translate.py", line 155, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'hget'
+2026-11-09 23:40:08,295 ERROR frappe Unable to load translations
+Site: None
+Form Dict: None
+Traceback (most recent call last):
+  File "/home/ahmed-khairy/Documents/Projects/Fabrica_Project/frappe-bench/apps/frappe/frappe/translate.py", line 155, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'hget'
+2026-11-09 23:40:08,528 ERROR frappe Unable to load translations
+Site: None
+Form Dict: None
+Traceback (most recent call last):
+  File "/home/ahmed-khairy/Documents/Projects/Fabrica_Project/frappe-bench/apps/frappe/frappe/translate.py", line 155, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'hget'
+2026-11-09 23:40:08,528 ERROR frappe Unable to load translations
+Site: None
+Form Dict: None
+Traceback (most recent call last):
+  File "/home/ahmed-khairy/Documents/Projects/Fabrica_Project/frappe-bench/apps/frappe/frappe/translate.py", line 155, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'hget'
+2026-11-09 23:40:08,528 ERROR frappe Unable to load translations
+Site: None
+Form Dict: None
+Traceback (most recent call last):
+  File "/home/ahmed-khairy/Documents/Projects/Fabrica_Project/frappe-bench/apps/frappe/frappe/translate.py", line 155, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'hget'
+2026-11-09 23:40:08,529 ERROR frappe Unable to load translations
+Site: None
+Form Dict: None
+Traceback (most recent call last):
+  File "/home/ahmed-khairy/Documents/Projects/Fabrica_Project/frappe-bench/apps/frappe/frappe/translate.py", line 155, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'hget'
+2026-11-09 23:40:08,529 ERROR frappe Unable to load translations
+Site: None
+Form Dict: None
+Traceback (most recent call last):
+  File "/home/ahmed-khairy/Documents/Projects/Fabrica_Project/frappe-bench/apps/frappe/frappe/translate.py", line 155, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'hget'
+2026-11-09 23:40:08,529 ERROR frappe Unable to load translations
+Site: None
+Form Dict: None
+Traceback (most recent call last):
+  File "/home/ahmed-khairy/Documents/Projects/Fabrica_Project/frappe-bench/apps/frappe/frappe/translate.py", line 155, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'hget'
+2026-11-09 23:40:08,529 ERROR frappe Unable to load translations
+Site: None
+Form Dict: None
+Traceback (most recent call last):
+  File "/home/ahmed-khairy/Documents/Projects/Fabrica_Project/frappe-bench/apps/frappe/frappe/translate.py", line 155, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'hget'
+2026-11-09 23:40:08,563 ERROR frappe Unable to load translations
+Site: None
+Form Dict: None
+Traceback (most recent call last):
+  File "/home/ahmed-khairy/Documents/Projects/Fabrica_Project/frappe-bench/apps/frappe/frappe/translate.py", line 155, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'hget'
+2026-11-09 23:40:08,564 ERROR frappe Unable to load translations
+Site: None
+Form Dict: None
+Traceback (most recent call last):
+  File "/home/ahmed-khairy/Documents/Projects/Fabrica_Project/frappe-bench/apps/frappe/frappe/translate.py", line 155, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'hget'
+2026-11-09 23:40:08,564 ERROR frappe Unable to load translations
+Site: None
+Form Dict: None
+Traceback (most recent call last):
+  File "/home/ahmed-khairy/Documents/Projects/Fabrica_Project/frappe-bench/apps/frappe/frappe/translate.py", line 155, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'hget'
+2026-11-09 23:40:08,564 ERROR frappe Unable to load translations
+Site: None
+Form Dict: None
+Traceback (most recent call last):
+  File "/home/ahmed-khairy/Documents/Projects/Fabrica_Project/frappe-bench/apps/frappe/frappe/translate.py", line 155, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'hget'
+2026-11-09 23:40:40,229 ERROR frappe Unable to load translations
+Site: None
+Form Dict: None
+Traceback (most recent call last):
+  File "/home/ahmed-khairy/Documents/Projects/Fabrica_Project/frappe-bench/apps/frappe/frappe/translate.py", line 155, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'hget'
+2026-11-09 23:40:40,230 ERROR frappe Unable to load translations
+Site: None
+Form Dict: None
+Traceback (most recent call last):
+  File "/home/ahmed-khairy/Documents/Projects/Fabrica_Project/frappe-bench/apps/frappe/frappe/translate.py", line 155, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'hget'
+2026-11-09 23:40:40,233 ERROR frappe Unable to load translations
+Site: None
+Form Dict: None
+Traceback (most recent call last):
+  File "/home/ahmed-khairy/Documents/Projects/Fabrica_Project/frappe-bench/apps/frappe/frappe/translate.py", line 155, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'hget'
+2026-11-09 23:40:40,233 ERROR frappe Unable to load translations
+Site: None
+Form Dict: None
+Traceback (most recent call last):
+  File "/home/ahmed-khairy/Documents/Projects/Fabrica_Project/frappe-bench/apps/frappe/frappe/translate.py", line 155, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'hget'

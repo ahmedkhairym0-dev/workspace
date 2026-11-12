@@ -1,137 +1,143 @@
 {
-  "version": 1,
+  "version": 2,
   "skills": {
     "apex": {
       "source": "melvynx/aiblueprint",
       "sourceType": "github",
       "skillPath": "skills/apex/SKILL.md",
-      "computedHash": "8778a40b7283b0fc889525aef1da389ac1f27862cfae58d379f6943453b90b45"
+      "computedHash": "d2ba63ddd48ef5081d87d48dc95aa0780b200c8b956c7fd8a6f58a283df9d189"
     },
     "code-review": {
       "source": "mattpocock/skills",
       "sourceType": "github",
       "skillPath": "skills/engineering/code-review/SKILL.md",
-      "computedHash": "c2745e2be960b82b9fddd82cf45265f42431e7b045c403f297b25f0f311e9210"
+      "computedHash": "ce86b40a3d1648a0018b712f0c70704e6c2316b2a9b9e915ab116916a31273dc"
     },
     "code-style": {
       "source": "frappe/skills",
       "sourceType": "github",
       "skillPath": "skills/code-style/SKILL.md",
-      "computedHash": "158e8cc8fa680cd8650e11f42cb940757d70353a607cd3144e6158d8add91e66"
+      "computedHash": "6d8509225db872e34e177667332a9cfd9cb03e0d99cc925e110af602e8dae73a"
     },
     "codebase-design": {
       "source": "mattpocock/skills",
       "sourceType": "github",
       "skillPath": "skills/engineering/codebase-design/SKILL.md",
-      "computedHash": "aa11a96c08451f4ff86052d5da94004a8c97bb4ea41b2ac8a4300c189f66c89c"
+      "computedHash": "d40f025dc1b0f2020663260f38f2bcb8d6ed3523afb11e5fda624b01238677e8"
     },
     "deep-app-audit": {
       "source": "frappe/skills",
       "sourceType": "github",
       "skillPath": "skills/deep-app-audit/SKILL.md",
-      "computedHash": "55c7a4aceb6f4808022f766d10c744f4a5a3ccfa45e0a7b2328689e2e4879db5"
+      "computedHash": "036d7e447079f19e1280d5ffd1065d2d225bdf0f4f62637f7173eca0536ebb18"
     },
     "draft-security-advisory": {
       "source": "frappe/skills",
       "sourceType": "github",
       "skillPath": "skills/draft-security-advisory/SKILL.md",
-      "computedHash": "9237b3e0081b65964101e3f00b0f8df733dea06ac4a7d112483878b6f91902b9"
+      "computedHash": "3abde37e0e6a0488a4ac4732c3dba7feee6ddc3fdc33307f33d5528c8924adb2"
     },
     "fix-issue": {
       "source": "frappe/skills",
       "sourceType": "github",
       "skillPath": "skills/fix-issue/SKILL.md",
-      "computedHash": "0e6a5d563dd1695ce1cf7867e903aeae89fa8ef2a404b55a8ad39368253e9447"
+      "computedHash": "b51c79ccfe0773c887e0431485095f456d3b517eaec1a151e81b8549c01960f2"
     },
     "frappe-app-dev": {
       "source": "frappe/skills",
       "sourceType": "github",
       "skillPath": "skills/frappe-app-dev/SKILL.md",
-      "computedHash": "53fc33422fc32f67527bc98af3f5d2e09c51e5b969f7114deefbb3c0bd6eb49f"
+      "computedHash": ""
     },
     "frappe-code-review": {
       "source": "frappe/skills",
       "sourceType": "github",
       "skillPath": "skills/frappe-code-review/SKILL.md",
-      "computedHash": "76db60c6865eba3a7c2f3ff079f3904db753a7b1bd16e4f24ace75e10351be0f"
+      "computedHash": ""
     },
     "generate-test-cases": {
       "source": "mavka-ai/unit-tests-skills",
       "sourceType": "github",
       "skillPath": "skills/generate-test-cases/SKILL.md",
-      "computedHash": "e86140660da4b5c026660c9dd2463e8921a4df63577ace104fc07d275cbe3d54"
+      "computedHash": "da80b7969d5fed0ebd3e1ec8da9bc6fdd8a2cc78c4afd11170525bd34df9263b"
     },
     "generate-tests": {
       "source": "mavka-ai/unit-tests-skills",
       "sourceType": "github",
       "skillPath": "skills/generate-tests/SKILL.md",
-      "computedHash": "be6edbdb9bb66aeb1f97fc31eb988804d61b5feb7bbedf6e2c35de81b134e807"
+      "computedHash": "bce7090c06b8ddad5f28662cab291af55ed67b4475ea1960821e3fb5270b9d32"
     },
     "grill-me": {
       "source": "mattpocock/skills",
       "sourceType": "github",
       "skillPath": "skills/productivity/grill-me/SKILL.md",
-      "computedHash": "9cdbb4b8f7a3aeaef82e6230c9e823500d4a8a1214c726cf342cf9829d34fc7d"
+      "computedHash": "ab1acb9fbd9eaee03da254abb8a8de228d1e7a07475fe959da4a5eefa34ea4b9"
     },
     "grilling": {
       "source": "mattpocock/skills",
       "sourceType": "github",
       "skillPath": "skills/productivity/grilling/SKILL.md",
-      "computedHash": "e40cc1d348f6d935e28f1e24474302d7368f0a400429271a43b35fe154891dc5"
+      "computedHash": "485451958784497cd4c4dbea13cb5bbb579da58fac0d0e45f3bcb310fab68ac7"
     },
     "implement-spec": {
       "source": "mattpocock/skills",
       "sourceType": "github",
       "skillPath": "skills/engineering/implement-spec/SKILL.md",
-      "computedHash": "0ccc13c6766b0e5f55229c8f1252d004090da70e6610b4c324cd245970fcb3f1"
+      "computedHash": "c3474ef320861d793e8b30d41fbdd2cb0ceaa1081bb5c81b7f26c455eb776573"
     },
     "improve-codebase-architecture": {
       "source": "mattpocock/skills",
       "sourceType": "github",
       "skillPath": "skills/engineering/improve-codebase-architecture/SKILL.md",
-      "computedHash": "f768cb44209e0d30e3449b8f95ea3dc8293093f73cfe02127d530db43412cf76"
+      "computedHash": "f0820b18426a7d9a6c823a890988ba0ac70bf0fd596d30d7ef07c88558728c23"
+    },
+    "ponytail": {
+      "source": "DietrichGebert/ponytail",
+      "sourceType": "github",
+      "skillPath": "skills/ponytail/SKILL.md",
+      "computedHash": "56d72677aca02689ac89bd48734e8c19b40ab86716d1257eaf5f1238b43cda6b"
     },
     "resolve-backport-conflicts": {
       "source": "frappe/skills",
       "sourceType": "github",
       "skillPath": "skills/resolve-backport-conflicts/SKILL.md",
-      "computedHash": "0b72672daf96ef494b17ca20cdcb8a203fb0e0c4b8aa368280ec3aa1d996a01a"
+      "computedHash": ""
     },
     "tdd": {
       "source": "mattpocock/skills",
       "sourceType": "github",
       "skillPath": "skills/engineering/tdd/SKILL.md",
-      "computedHash": "daf55026f456af104a72fa43247f7bcec89e5127316dc5b1b8d675d6a9d8ce94"
+      "computedHash": "e3e0f78ff1c2d52ffefa0378baa1e80e129d359288cf9a56f4e59afcd2aac86c"
     },
     "technical-writing": {
       "source": "frappe/skills",
       "sourceType": "github",
       "skillPath": "skills/technical-writing/SKILL.md",
-      "computedHash": "08470ffb6aa0878e95a06e540a8ded61c122db0450c6f3991d7b56477a202faa"
+      "computedHash": "7896dcb3907b7b365d919be2d64af2c07876bb08f7ce6fcf184d703d39c52db8"
     },
     "thermo-nuclear-code-quality-review": {
       "source": "cursor/plugins",
       "sourceType": "github",
       "skillPath": "cursor-team-kit/skills/thermo-nuclear-code-quality-review/SKILL.md",
-      "computedHash": "9052b01b46b1d8dbf94c45f9313ec1983443f9a460e83d49cdc7fe0f640ca476"
+      "computedHash": "705eb32106f0fec9c9e9b4afccb6156f17f6e8829368e54cd5b53f10e4374340"
     },
     "to-spec": {
       "source": "mattpocock/skills",
       "sourceType": "github",
       "skillPath": "skills/engineering/to-spec/SKILL.md",
-      "computedHash": "3fa1a0695d4ea242fae9e569e4d22aa1788623197abb33bfadafae7315789bbf"
+      "computedHash": "eb934b5eda9523c7853a2741544bd4721ee1bea471f5a04f8397827f67bdbdda"
     },
     "to-tickets": {
       "source": "mattpocock/skills",
       "sourceType": "github",
       "skillPath": "skills/engineering/to-tickets/SKILL.md",
-      "computedHash": "5f871bdc46a9212222214ba399be4965374208af1bd7f48f1271bef72841dd31"
+      "computedHash": "17496514c92954f68eacdf2b1221e2ddb39fa231b83f03c70bc7d4422f704b2d"
     },
     "ui-design": {
       "source": "frappe/skills",
       "sourceType": "github",
       "skillPath": "skills/ui-design/SKILL.md",
-      "computedHash": "c3dec2ce532f6f99bcf827030430dc4bb1528f3d654f2736a3612f85e4afcf28"
+      "computedHash": "383b0719933fab6d44f492a885bbabc32504cb71e7c371f63d6df127ab257cd0"
     }
   }
 }

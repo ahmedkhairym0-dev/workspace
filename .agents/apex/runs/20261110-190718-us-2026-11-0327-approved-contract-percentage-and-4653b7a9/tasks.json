@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "execution_step": "step-03-execute.md",
+  "tasks": [
+    {
+      "id": "amount-service",
+      "objective": "amount-service",
+      "dependencies": [],
+      "read_set": [
+        "approved proposal",
+        "current code",
+        "Frappe lifecycle"
+      ],
+      "write_set": [
+        "new monetary service",
+        "new service tests"
+      ],
+      "side_effects": [
+        "local file edits"
+      ],
+      "owner": "implement_amount_service",
+      "inputs": [
+        "contract percent sharedpool proposal approved"
+      ],
+      "expected_outputs": [
+        "amount-service"
+      ],
+      "validation": [
+        "static syntax",
+        "simulated behavioral checks",
+        "independent financial and lifecycle review"
+      ],
+      "evidence_required": [
+        "review ledger"
+      ],
+      "stop_condition": "Approved result present and statically reviewed, no real execution",
+      "status": "complete"
+    },
+    {
+      "id": "integration",
+      "objective": "integration",
+      "dependencies": [],
+      "read_set": [
+        "approved proposal",
+        "current code",
+        "Frappe lifecycle"
+      ],
+      "write_set": [
+        "contract metadata/controller/JS",
+        "invoice controller",
+        "query helper",
+        "quantity policy",
+        "fixtures/integration tests",
+        "story/plan/review"
+      ],
+      "side_effects": [
+        "local file edits"
+      ],
+      "owner": "coordinator",
+      "inputs": [
+        "contract percent sharedpool proposal approved"
+      ],
+      "expected_outputs": [
+        "integration"
+      ],
+      "validation": [
+        "static syntax",
+        "simulated behavioral checks",
+        "independent financial and lifecycle review"
+      ],
+      "evidence_required": [
+        "review ledger"
+      ],
+      "stop_condition": "Approved result present and statically reviewed, no real execution",
+      "status": "complete"
+    },
+    {
+      "id": "review",
+      "objective": "review",
+      "dependencies": [
+        "amount-service",
+        "integration"
+      ],
+      "read_set": [
+        "approved proposal",
+        "current code",
+        "Frappe lifecycle"
+      ],
+      "write_set": [
+        "read-only review"
+      ],
+      "side_effects": [
+        "local file edits"
+      ],
+      "owner": "independent reviewers",
+      "inputs": [
+        "contract percent sharedpool proposal approved"
+      ],
+      "expected_outputs": [
+        "review"
+      ],
+      "validation": [
+        "static syntax",
+        "simulated behavioral checks",
+        "independent financial and lifecycle review"
+      ],
+      "evidence_required": [
+        "review ledger"
+      ],
+      "stop_condition": "Approved result present and statically reviewed, no real execution",
+      "status": "complete"
+    }
+  ]
+}

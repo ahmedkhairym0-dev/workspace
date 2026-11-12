@@ -1,0 +1,31 @@
+{
+  "artifacts": [
+    {
+      "created_at": "2026-11-10T14:06:05+00:00",
+      "id": "20a1dd47-bd95-4666-8dca-235a64a6d5bf",
+      "layer": "local",
+      "path": ".agents/apex/runs/20261110-155520-implement-approved-phases-4-5-of-us-2026-11-0327-99b3410f/artifacts/validation.json",
+      "phase": "validate",
+      "revision": "1bd666c650dac9e703a389dcc8dca5ad27bc5cf9",
+      "sha256": "a006e548bab612d02cbd6f1f45efd5a95054548158e56377dd494875c82b98d4",
+      "size": 5966,
+      "status": "current",
+      "task_id": null,
+      "type": "validation-ledger"
+    },
+    {
+      "created_at": "2026-11-10T14:06:05+00:00",
+      "id": "73eae875-d1fc-4df2-b6fc-7c6a22147807",
+      "layer": "local",
+      "path": "user stories/US-2026-11-0327-acceptance-review.md",
+      "phase": "validate",
+      "revision": "1bd666c650dac9e703a389dcc8dca5ad27bc5cf9",
+      "sha256": "e797aeb10e4e78acbbf6755a9422accc38c68b8c92675fd9ef54cef72fe0a373",
+      "size": 7446,
+      "status": "current",
+      "task_id": null,
+      "type": "simulated-acceptance"
+    }
+  ],
+  "schema_version": 1
+}

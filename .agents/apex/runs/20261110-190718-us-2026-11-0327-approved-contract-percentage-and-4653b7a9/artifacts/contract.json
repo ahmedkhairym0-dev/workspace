@@ -1,0 +1,43 @@
+{
+  "objective": "Approved contract percentage, used/remaining monetary allowance; excess by source consumes shared pool; quantity uses contractpercent",
+  "risk": "high billing/concurrency",
+  "scope": "fabrica_construction only plus story/plan/review",
+  "exclusions": [
+    "no migration",
+    "no actual tests",
+    "no commit",
+    "no deployment",
+    "no overtime/tax allowance"
+  ],
+  "baseline_revision": "d30f2bbc861470744fded23b92c31e2c24a651ae",
+  "baseline_files": {
+    "fabrica_construction/fabrica_construction/doctype/construction_export_template/construction_export_template.js": "aed1f4c116eb1a693cfcff6666419d56c18a41b284e1a567c67ab1b434ef4668",
+    "fabrica_construction/fabrica_construction/doctype/construction_export_template/construction_export_template.json": "69e29f8f07a73d8444e8f85ff7fd0101e4dc833a481125362500bc96870065c4",
+    "fabrica_construction/fabrica_construction/doctype/consultation_contract/consultation_contract.js": "75ea07524a2339943125ebddac29d4b298b409ff6087826ead69d542334af200",
+    "fabrica_construction/fabrica_construction/doctype/consultation_contract/consultation_contract.json": "4de030b3378b0087309a81c345a891de611acc46f0550ab1b8b1d5f0ccca39ea",
+    "fabrica_construction/fabrica_construction/doctype/consultation_contract/consultation_contract.py": "641f300a3898605c6976f275bc287f02f4d4a4c92b2d85bc6420ebe920f13b94",
+    "fabrica_construction/fabrica_construction/doctype/consultation_contract/test_consultation_contract.js": "54da19452b629d3a1f49f49684dc2b1234ccb9daa1e27107f1134a150d2ef35a",
+    "fabrica_construction/fabrica_construction/doctype/consultation_contract/test_make_consultation_invoice.py": "75f172034de43c22410375c133cb2a9be5f98b07843fbb092128376293f4a73b",
+    "fabrica_construction/fabrica_construction/doctype/consultation_invoice/billing_period.py": "1758d5e11c608b39f080f71c33056289c78d84322645156dce891f8b8aeeb6bb",
+    "fabrica_construction/fabrica_construction/doctype/consultation_invoice/consultation_invoice.js": "ac1e8dd6ae7ed95ebb5ead16fdee725a51a57944649a9502784678580f20ee65",
+    "fabrica_construction/fabrica_construction/doctype/consultation_invoice/consultation_invoice.json": "e956bc123a89d9a7b63a11bfcb98279d3a663c04bf0bacc629dbd976345705fe",
+    "fabrica_construction/fabrica_construction/doctype/consultation_invoice/consultation_invoice.py": "684a2c9496e05aab5d884996555c28d3b86a98cb057d90fde925fd186bf67612",
+    "fabrica_construction/fabrica_construction/doctype/consultation_invoice/test_billing_period.py": "f5a4a3d27fe98eeaeb2f5f629d6c6ef23a8597c119e2456d4c5d89e1d4c0f221",
+    "fabrica_construction/fabrica_construction/doctype/consultation_invoice/test_consultation_invoice.js": "fc49e53285e512643b6f1c27c5a846de5981775513a7220a77fa42fec71140a5",
+    "fabrica_construction/fabrica_construction/doctype/consultation_invoice/test_consultation_invoice.py": "2f8152754b37db59096118a1c519038291b411c6543b2ab88a9e3eb651172ffd",
+    "fabrica_construction/fabrica_construction/doctype/consultation_invoice/test_contract_invoice_balances.py": "06163bb9c6c1966f5b32356920d9e312531f7acbb1aa5d77bf7e56d0bc2bb802",
+    "fabrica_construction/fabrica_construction/doctype/consultation_invoice/test_invoice_row_restrictions.py": "7c8144619ad8ba7833f3eda22418d7eb0c045c7de4460c4041ba4576ecca378f",
+    "fabrica_construction/fabrica_construction/doctype/consultation_invoice/test_overtime_allocation_logs.py": "0fa85b5d1d50f4c2d36b63ebf465f0ffd729334d537388a0369ce2fe35ce968a",
+    "fabrica_construction/public/js/consultation_sheets.js": "371eb18e84395dd61988933f5822c483193972cd4531c67017c7f0622d23bc91",
+    "fabrica_construction/public/js/fabrica_construction.bundle.js": "ccfca3300ca682866f14803d1423acf9617149f44d30bc6b9b751c1461cb2c79",
+    "fabrica_construction/public/js/sheet_utils.js": "1d4f24b277da883972609fcf8c922a30616660a9a59b111d34798b7ec22830e1",
+    "fabrica_construction/services/consultation_import.py": "895f8b718c627c6f3c3931805c2e4dc6288b2b6c4f96356f17296907845eef5e",
+    "fabrica_construction/services/consultation_import_values.py": "225955dab6f8d35478e8f39bef11e220d3bf46d8557669d11d966c4be6474303",
+    "fabrica_construction/services/consultation_quantity_allowance.py": "3665626205ed26dd5dd21410fb94d31875dbc8502fdf00f5451a4c5307c96081",
+    "fabrica_construction/tests/test_consultation_import.py": "c49a855eea67e8fb94efb789d2ff0e036c15d1b937ed51d4eea63725076fc39a",
+    "fabrica_construction/tests/test_consultation_import_validation.py": "4f1a1ed6104253721b47f9fb5cf6bf627caf2c33445bfade93d6a43cb31502fd",
+    "fabrica_construction/tests/test_consultation_quantity_allowance.py": "0fe1c56ce8c93420716877f3c7ad9a331e166456b408f1c5faf7f4d9e334d565",
+    "fabrica_construction/tests/test_consultation_rate_increase_import.py": "ea6bfe4d705e0e8da07f9a548880e02f0c8d1b06d28e306ba432623988f1b9b4",
+    "fabrica_construction/tests/test_consultation_sheets.js": "52e79fa4a5f7de88fadab9e08304c9e7a2ebdf53474bd00b59845ef16cb44d18"
+  }
+}

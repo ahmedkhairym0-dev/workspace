@@ -1,0 +1,203 @@
+{
+  "baseline": {
+    "available": true,
+    "branch": "master",
+    "branch_fingerprint": "9b3162498c21d7f960877099174ecea13410bd21d12440b2ea8868117fc08ae0",
+    "changes": [
+      {
+        "path": "construction refactoring/BOQ Refactoring Lessons & Architecture Patterns.md",
+        "status": "??"
+      },
+      {
+        "path": "construction refactoring/BOQ Variation Order - Discovery & Dependency Map.md",
+        "status": "??"
+      },
+      {
+        "path": "construction refactoring/Comprehensive Refactoring Plan - BOQ Variation Order.md",
+        "status": "??"
+      },
+      {
+        "path": "construction refactoring/Fabrica Construction Refactor - Executive Business Summary.md",
+        "status": "??"
+      },
+      {
+        "path": "construction refactoring/Fabrica Construction Refactor - Technical Architecture Document.md",
+        "status": "??"
+      },
+      {
+        "path": "construction refactoring/Refactoring .md",
+        "status": "??"
+      }
+    ],
+    "errors": [],
+    "paths_redacted": false,
+    "revision": "1bd666c650dac9e703a389dcc8dca5ad27bc5cf9",
+    "status_fingerprint": "62d16b2e700f3e804a92e38676aa03939899071469df7122aadbfb21b514c5c3",
+    "upstream": "origin/master",
+    "upstream_error": null,
+    "verified": true
+  },
+  "checkpoints": [
+    {
+      "git": {
+        "available": true,
+        "branch": "master",
+        "branch_fingerprint": "9b3162498c21d7f960877099174ecea13410bd21d12440b2ea8868117fc08ae0",
+        "changes": [
+          {
+            "path": ".agents/apex/",
+            "status": "??"
+          },
+          {
+            "path": "construction refactoring/BOQ Refactoring Lessons & Architecture Patterns.md",
+            "status": "??"
+          },
+          {
+            "path": "construction refactoring/BOQ Variation Order - Discovery & Dependency Map.md",
+            "status": "??"
+          },
+          {
+            "path": "construction refactoring/Comprehensive Refactoring Plan - BOQ Variation Order.md",
+            "status": "??"
+          },
+          {
+            "path": "construction refactoring/Fabrica Construction Refactor - Executive Business Summary.md",
+            "status": "??"
+          },
+          {
+            "path": "construction refactoring/Fabrica Construction Refactor - Technical Architecture Document.md",
+            "status": "??"
+          },
+          {
+            "path": "construction refactoring/Refactoring .md",
+            "status": "??"
+          }
+        ],
+        "errors": [],
+        "paths_redacted": false,
+        "revision": "1bd666c650dac9e703a389dcc8dca5ad27bc5cf9",
+        "status_fingerprint": "d4df19c25827da6b6ea3cb1c20cae78c3518616ee3f15f5cc915bac08f9eba14",
+        "upstream": "origin/master",
+        "upstream_error": null,
+        "verified": true
+      },
+      "id": "4b0ea129-7474-4740-8cd4-94373cdce070",
+      "message": "Ready to execute",
+      "phase": "plan",
+      "timestamp": "2026-11-09T21:28:25+00:00"
+    },
+    {
+      "git": {
+        "available": true,
+        "branch": "master",
+        "branch_fingerprint": "9b3162498c21d7f960877099174ecea13410bd21d12440b2ea8868117fc08ae0",
+        "changes": [
+          {
+            "path": ".agents/apex/",
+            "status": "??"
+          },
+          {
+            "path": "construction refactoring/BOQ Refactoring Lessons & Architecture Patterns.md",
+            "status": "??"
+          },
+          {
+            "path": "construction refactoring/BOQ Variation Order - Discovery & Dependency Map.md",
+            "status": "??"
+          },
+          {
+            "path": "construction refactoring/Comprehensive Refactoring Plan - BOQ Variation Order.md",
+            "status": "??"
+          },
+          {
+            "path": "construction refactoring/Fabrica Construction Refactor - Executive Business Summary.md",
+            "status": "??"
+          },
+          {
+            "path": "construction refactoring/Fabrica Construction Refactor - Technical Architecture Document.md",
+            "status": "??"
+          },
+          {
+            "path": "construction refactoring/Refactoring .md",
+            "status": "??"
+          },
+          {
+            "path": "logs/",
+            "status": "??"
+          }
+        ],
+        "errors": [],
+        "paths_redacted": false,
+        "revision": "1bd666c650dac9e703a389dcc8dca5ad27bc5cf9",
+        "status_fingerprint": "0ae505bdc7ed9a57c0fde4ef3ce55c622066d9be4d13f997b25d370c1a97a5c7",
+        "upstream": "origin/master",
+        "upstream_error": null,
+        "verified": true
+      },
+      "id": "9fe4619e-edfd-453e-b906-2c0d57fc69d7",
+      "message": "Integrated validation checkpoint",
+      "phase": "validate",
+      "timestamp": "2026-11-09T21:42:38+00:00"
+    },
+    {
+      "git": {
+        "available": true,
+        "branch": "master",
+        "branch_fingerprint": "9b3162498c21d7f960877099174ecea13410bd21d12440b2ea8868117fc08ae0",
+        "changes": [
+          {
+            "path": ".agents/apex/",
+            "status": "??"
+          },
+          {
+            "path": "construction refactoring/BOQ Refactoring Lessons & Architecture Patterns.md",
+            "status": "??"
+          },
+          {
+            "path": "construction refactoring/BOQ Variation Order - Discovery & Dependency Map.md",
+            "status": "??"
+          },
+          {
+            "path": "construction refactoring/Comprehensive Refactoring Plan - BOQ Variation Order.md",
+            "status": "??"
+          },
+          {
+            "path": "construction refactoring/Fabrica Construction Refactor - Executive Business Summary.md",
+            "status": "??"
+          },
+          {
+            "path": "construction refactoring/Fabrica Construction Refactor - Technical Architecture Document.md",
+            "status": "??"
+          },
+          {
+            "path": "construction refactoring/Refactoring .md",
+            "status": "??"
+          },
+          {
+            "path": "logs/",
+            "status": "??"
+          }
+        ],
+        "errors": [],
+        "paths_redacted": false,
+        "revision": "1bd666c650dac9e703a389dcc8dca5ad27bc5cf9",
+        "status_fingerprint": "0ae505bdc7ed9a57c0fde4ef3ce55c622066d9be4d13f997b25d370c1a97a5c7",
+        "upstream": "origin/master",
+        "upstream_error": null,
+        "verified": true
+      },
+      "id": "a3e879a2-2a4d-4227-934c-661a464bac0c",
+      "message": "APEX run complete",
+      "phase": "handoff",
+      "timestamp": "2026-11-09T21:42:58+00:00"
+    }
+  ],
+  "created_at": "2026-11-09T21:27:51+00:00",
+  "current_phase": "handoff",
+  "last_event_id": "8f141e42-0b48-41e6-915b-bee3826ec610",
+  "root": "/home/ahmed-khairy/Documents/Projects/Fabrica_Project",
+  "run_id": "20261109-232751-map-zero-qty-items-and-enforce-overbilling-allow-74b1d03f",
+  "schema_version": 1,
+  "status": "complete",
+  "task": "Map zero-qty items and enforce overbilling allowance on Construction Invoice",
+  "updated_at": "2026-11-09T21:42:58+00:00"
+}

@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "execution_step": "step-03-execute.md",
+  "tasks": [
+    {
+      "id": "billing",
+      "objective": "Remove server billing and overtime ceilings",
+      "dependencies": [],
+      "read_set": [
+        "approved plan",
+        "relevant implementation and tests"
+      ],
+      "write_set": [
+        "consultation_contract.py",
+        "consultation_invoice.py",
+        "billing_period.py",
+        "Python consultation tests"
+      ],
+      "side_effects": [
+        "local file edits only"
+      ],
+      "owner": "implement_billing",
+      "inputs": [
+        "approved phases 1-3"
+      ],
+      "expected_outputs": [
+        "Remove server billing and overtime ceilings"
+      ],
+      "validation": [
+        "static inspection",
+        "syntax checks",
+        "simulated outcomes"
+      ],
+      "evidence_required": [
+        "diff review"
+      ],
+      "stop_condition": "Changes complete within scope, or report blocker",
+      "status": "complete"
+    },
+    {
+      "id": "downloads",
+      "objective": "Remove client gates and implement consultation Excel downloads",
+      "dependencies": [],
+      "read_set": [
+        "approved plan",
+        "relevant implementation and tests"
+      ],
+      "write_set": [
+        "consultation JS",
+        "parent JSON",
+        "template JSON/JS",
+        "sheet_utils.js",
+        "consultation_sheets.js",
+        "JS tests"
+      ],
+      "side_effects": [
+        "local file edits only"
+      ],
+      "owner": "coordinator",
+      "inputs": [
+        "approved phases 1-3"
+      ],
+      "expected_outputs": [
+        "Remove client gates and implement consultation Excel downloads"
+      ],
+      "validation": [
+        "static inspection",
+        "syntax checks",
+        "simulated outcomes"
+      ],
+      "evidence_required": [
+        "diff review"
+      ],
+      "stop_condition": "Changes complete within scope, or report blocker",
+      "status": "complete"
+    },
+    {
+      "id": "review",
+      "objective": "Inspect integrated billing and download diff",
+      "dependencies": [
+        "billing",
+        "downloads"
+      ],
+      "read_set": [
+        "approved plan",
+        "relevant implementation and tests"
+      ],
+      "write_set": [
+        "review artifact"
+      ],
+      "side_effects": [
+        "local file edits only"
+      ],
+      "owner": "independent-review",
+      "inputs": [
+        "approved phases 1-3"
+      ],
+      "expected_outputs": [
+        "Inspect integrated billing and download diff"
+      ],
+      "validation": [
+        "static inspection",
+        "syntax checks",
+        "simulated outcomes"
+      ],
+      "evidence_required": [
+        "diff review"
+      ],
+      "stop_condition": "Changes complete within scope, or report blocker",
+      "status": "complete"
+    }
+  ]
+}

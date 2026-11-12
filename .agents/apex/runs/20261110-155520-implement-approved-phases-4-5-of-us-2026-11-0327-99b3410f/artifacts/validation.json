@@ -1,0 +1,75 @@
+{
+  "timestamp": "2026-11-10T14:06:04.515920+00:00",
+  "app_revision": "d30f2bbc861470744fded23b92c31e2c24a651ae",
+  "scope": "Approved phases4-5, integrated static review of phases1-5. Prior phase1-3 files are user-staged; index preserved.",
+  "checks": [
+    {
+      "command": "AST parsing, json.loads, node --check, git diff HEAD --check",
+      "status": "PASS",
+      "exit_code": 0,
+      "files": {
+        "python": 14,
+        "json": 3,
+        "javascript": 8
+      }
+    },
+    {
+      "command": "Test suites, browser, build, migrate, staging",
+      "status": "NOT_RUN",
+      "reason": "User instructions require simulated tests unless real execution explicitly requested."
+    }
+  ],
+  "findings": [
+    {
+      "id": "IMPORT-RATE",
+      "severity": "P2",
+      "disposition": "CONFIRMED_FIXED",
+      "resolution": "Canonical effective-rate positivity and precedence retained; blank Initial Rate and simultaneous-rate regressions authored."
+    },
+    {
+      "id": "IMPORT-TIMER",
+      "severity": "P2",
+      "disposition": "CONFIRMED_FIXED",
+      "resolution": "Cancel/invalidate recalculation only on validated application; error paths preserve pending calculations."
+    },
+    {
+      "id": "INVOICE-FIXTURE",
+      "disposition": "FIXED",
+      "resolution": "Added missing is_new method to touched invoice fixture for calculation-path compatibility."
+    }
+  ],
+  "reviews": {
+    "server": "Independent production and Python-test static review clean after fixes.",
+    "client": "Independent production and JS-test static review clean; fixture gap corrected."
+  },
+  "simulated_acceptance": "user stories/US-2026-11-0327-acceptance-review.md",
+  "files": {
+    "fabrica_construction/fabrica_construction/doctype/construction_export_template/construction_export_template.js": "aed1f4c116eb1a693cfcff6666419d56c18a41b284e1a567c67ab1b434ef4668",
+    "fabrica_construction/fabrica_construction/doctype/construction_export_template/construction_export_template.json": "7ba6d274aaba76c1215abb95f41f72532230796bd1f2dc65f7e84b5721b6ab35",
+    "fabrica_construction/fabrica_construction/doctype/consultation_contract/consultation_contract.js": "75ea07524a2339943125ebddac29d4b298b409ff6087826ead69d542334af200",
+    "fabrica_construction/fabrica_construction/doctype/consultation_contract/consultation_contract.json": "328b03965edce4ca6076b6e2ede86b718827ab92f93f08129f3cfbe42208833c",
+    "fabrica_construction/fabrica_construction/doctype/consultation_contract/consultation_contract.py": "57241fc0fd2a91e6100a5356fe9da82b5c1301372fd95373206a7368c20656c5",
+    "fabrica_construction/fabrica_construction/doctype/consultation_contract/test_consultation_contract.js": "54da19452b629d3a1f49f49684dc2b1234ccb9daa1e27107f1134a150d2ef35a",
+    "fabrica_construction/fabrica_construction/doctype/consultation_contract/test_make_consultation_invoice.py": "75f172034de43c22410375c133cb2a9be5f98b07843fbb092128376293f4a73b",
+    "fabrica_construction/fabrica_construction/doctype/consultation_invoice/billing_period.py": "1758d5e11c608b39f080f71c33056289c78d84322645156dce891f8b8aeeb6bb",
+    "fabrica_construction/fabrica_construction/doctype/consultation_invoice/consultation_invoice.js": "ac1e8dd6ae7ed95ebb5ead16fdee725a51a57944649a9502784678580f20ee65",
+    "fabrica_construction/fabrica_construction/doctype/consultation_invoice/consultation_invoice.json": "bf83d92d2b4479d98d3689f7c5ac6fc9a5415d4a43b021484bed23cdb6fa9cd2",
+    "fabrica_construction/fabrica_construction/doctype/consultation_invoice/consultation_invoice.py": "b6df0f55ba58c0889bfdcbaa863fa10a8463dcfacc0817769e8f61292a3debf4",
+    "fabrica_construction/fabrica_construction/doctype/consultation_invoice/test_billing_period.py": "f5a4a3d27fe98eeaeb2f5f629d6c6ef23a8597c119e2456d4c5d89e1d4c0f221",
+    "fabrica_construction/fabrica_construction/doctype/consultation_invoice/test_consultation_invoice.js": "fc49e53285e512643b6f1c27c5a846de5981775513a7220a77fa42fec71140a5",
+    "fabrica_construction/fabrica_construction/doctype/consultation_invoice/test_consultation_invoice.py": "81ea9d9f7c4a2f75093a60377131e99c2f9829fb901b825561366fbdd7c857ce",
+    "fabrica_construction/fabrica_construction/doctype/consultation_invoice/test_contract_invoice_balances.py": "06163bb9c6c1966f5b32356920d9e312531f7acbb1aa5d77bf7e56d0bc2bb802",
+    "fabrica_construction/fabrica_construction/doctype/consultation_invoice/test_invoice_row_restrictions.py": "7c8144619ad8ba7833f3eda22418d7eb0c045c7de4460c4041ba4576ecca378f",
+    "fabrica_construction/fabrica_construction/doctype/consultation_invoice/test_overtime_allocation_logs.py": "0fa85b5d1d50f4c2d36b63ebf465f0ffd729334d537388a0369ce2fe35ce968a",
+    "fabrica_construction/public/js/consultation_sheets.js": "371eb18e84395dd61988933f5822c483193972cd4531c67017c7f0622d23bc91",
+    "fabrica_construction/public/js/fabrica_construction.bundle.js": "ccfca3300ca682866f14803d1423acf9617149f44d30bc6b9b751c1461cb2c79",
+    "fabrica_construction/public/js/sheet_utils.js": "1d4f24b277da883972609fcf8c922a30616660a9a59b111d34798b7ec22830e1",
+    "fabrica_construction/tests/test_consultation_sheets.js": "52e79fa4a5f7de88fadab9e08304c9e7a2ebdf53474bd00b59845ef16cb44d18",
+    "fabrica_construction/services/consultation_import.py": "af9e6d00e63e664398297997f56aad6e94098a1ef9bf74705c6396641e8bbef4",
+    "fabrica_construction/services/consultation_import_values.py": "225955dab6f8d35478e8f39bef11e220d3bf46d8557669d11d966c4be6474303",
+    "fabrica_construction/tests/test_consultation_import.py": "3e662d30555aeda2cc33d28f5604bb4d045b2548d753b54d1217453c2aabed5d",
+    "fabrica_construction/tests/test_consultation_import_validation.py": "54dad256002ae53826d6153cf715a0353568905d65c351f2e2616eb644e8e607",
+    "fabrica_construction/tests/test_consultation_rate_increase_import.py": "ea6bfe4d705e0e8da07f9a548880e02f0c8d1b06d28e306ba432623988f1b9b4"
+  },
+  "delivery": "Local edits only. No index changes, commit, push, PR, migration or deployment."
+}

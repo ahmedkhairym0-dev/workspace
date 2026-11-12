@@ -1,0 +1,18 @@
+{
+  "artifacts": [
+    {
+      "created_at": "2026-11-10T17:16:38+00:00",
+      "id": "bccffcc5-2750-4b17-9126-da4f43370b7c",
+      "layer": "local",
+      "path": ".agents/apex/runs/20261110-190718-us-2026-11-0327-approved-contract-percentage-and-4653b7a9/artifacts/validation.json",
+      "phase": "validate",
+      "revision": "1bd666c650dac9e703a389dcc8dca5ad27bc5cf9",
+      "sha256": "2c14d0c3e865bc70fbb98657f6d5e1aa78644de9bb8bc9c65b35ab81e8dc21d6",
+      "size": 6567,
+      "status": "current",
+      "task_id": null,
+      "type": "validation-ledger"
+    }
+  ],
+  "schema_version": 1
+}

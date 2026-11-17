@@ -1,3 +1,5 @@
+[Deprecated]
+
 # Implementation Plan: Design Subsystem Quality & Performance Modernization
 
 ## Goal Description

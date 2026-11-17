@@ -54,6 +54,10 @@
       "branch": "main"
     },
     {
+      "name": "salary_tax_eg",
+      "branch": "develop"
+    },
+    {
       "name": "lending",
       "branch": "version-15"
     },
@@ -70,16 +74,8 @@
       "branch": "develop"
     },
     {
-      "name": "child_table_pagination",
-      "branch": "develop"
-    },
-    {
       "name": "learning_center",
       "branch": "main"
-    },
-    {
-      "name": "handover",
-      "branch": "develop"
     },
     {
       "name": "wiki",
@@ -94,8 +90,20 @@
       "branch": "main"
     },
     {
-      "name": "fabrica_commit",
+      "name": "handover",
       "branch": "main"
+    },
+    {
+      "name": "telephony",
+      "branch": "develop"
+    },
+    {
+      "name": "helpdesk",
+      "branch": "version-15"
+    },
+    {
+      "name": "fabrica_saw_connector",
+      "branch": "develop"
     }
   ]
 }

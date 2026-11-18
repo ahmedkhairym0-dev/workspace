@@ -1,5 +1,5 @@
 {
-  "site_name": "aljar.local",
+  "site_name": "dev.local",
   "setup": {
     "language": "English",
     "country": "Egypt",
@@ -67,10 +67,6 @@
     },
     {
       "name": "handover",
-      "branch": "develop"
-    },
-    {
-      "name": "fabrica_saw_connector",
       "branch": "develop"
     }
   ]

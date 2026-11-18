@@ -100,10 +100,6 @@
     {
       "name": "helpdesk",
       "branch": "version-15"
-    },
-    {
-      "name": "fabrica_saw_connector",
-      "branch": "develop"
     }
   ]
 }

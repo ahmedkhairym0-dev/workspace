@@ -130,7 +130,7 @@ uninstall_extra_apps() {
 uninstall_app() {
     local app="$1" installed_apps
 
-    bench --site "$SITE_NAME" uninstall-app "$app" --yes || return
+    bench --site "$SITE_NAME" uninstall-app "$app" --yes --no-backup || return
     installed_apps="$(bench --site "$SITE_NAME" list-apps | awk 'NF {print $1}')" || return
     # Bench can refuse to remove a dependency without returning a nonzero status.
     if grep -Fxq -- "$app" <<< "$installed_apps"; then

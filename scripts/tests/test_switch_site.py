@@ -138,8 +138,8 @@ class SwitchSiteTest(unittest.TestCase):
         self.assertIn(" - extra_base\n - extra_child\n", result.stdout)
         self.assertIn("DocTypes and data", result.stdout)
         self.assertEqual([row for row in self.commands if "uninstall-app" in row], [
-            ["bench", "--site", "alpha.localhost", "uninstall-app", "extra_child", "--yes"],
-            ["bench", "--site", "alpha.localhost", "uninstall-app", "extra_base", "--yes"],
+            ["bench", "--site", "alpha.localhost", "uninstall-app", "extra_child", "--yes", "--no-backup"],
+            ["bench", "--site", "alpha.localhost", "uninstall-app", "extra_base", "--yes", "--no-backup"],
         ])
         last_uninstall = max(i for i, row in enumerate(self.commands) if "uninstall-app" in row)
         first_install = next(i for i, row in enumerate(self.commands) if "install-app" in row)
@@ -161,7 +161,7 @@ class SwitchSiteTest(unittest.TestCase):
     def test_uninstall_error_stops_by_default(self):
         result = self.switch(answers="n\ny\n", EXTRA_APPS="extra", FAIL_UNINSTALL="extra")
         self.assertEqual(result.returncode, 1)
-        self.assertEqual(self.commands[-1], ["bench", "--site", "alpha.localhost", "uninstall-app", "extra", "--yes"])
+        self.assertEqual(self.commands[-1], ["bench", "--site", "alpha.localhost", "uninstall-app", "extra", "--yes", "--no-backup"])
 
     def test_uninstall_error_continues_when_enabled(self):
         result = self.switch(answers="y\ny\n", EXTRA_APPS="extra", FAIL_UNINSTALL="extra")

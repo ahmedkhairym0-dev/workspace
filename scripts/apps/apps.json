@@ -31,11 +31,6 @@
       "url": "https://github.com/frappe/wiki.git"
     },
     {
-      "name": "helpdesk",
-      "branch": "version-15",
-      "url": "https://github.com/frappe/helpdesk.git"
-    },
-    {
       "name": "fabrica_saw_connector",
       "branch": "develop",
       "url": "https://git.fabrica-dev.com/frappe_erp/fabrica_saw_connector.git"

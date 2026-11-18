@@ -96,10 +96,6 @@
     {
       "name": "telephony",
       "branch": "develop"
-    },
-    {
-      "name": "helpdesk",
-      "branch": "version-15"
     }
   ]
 }
